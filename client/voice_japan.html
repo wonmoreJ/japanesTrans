@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Voice Japan</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f5f7fa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .container {
+        background: #ffffff;
+        padding: 30px 40px;
+        border-radius: 16px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        text-align: center;
+        width: 400px;
+      }
+
+      .text-display {
+        font-size: 1.1rem;
+        color: #333;
+        margin-bottom: 20px;
+        padding: 10px;
+        background-color: #f1f1f1;
+        border-radius: 8px;
+        min-height: 40px;
+        cursor: default; /* ✅ 커서 기본화 */
+        user-select: none; /* ✅ 텍스트 선택 불가 */
+      }
+
+      #voiceBtn {
+        background-color: #4a90e2;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        font-size: 1rem;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        user-select: none; /* ✅ 텍스트 선택 불가 */
+      }
+
+      #voiceBtn:hover {
+        background-color: #3578d3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="text-display" id="voice">🎤 음성 입력 결과</div>
+      <div class="text-display" id="japanese">🇯🇵 일본어 번역 결과</div>
+      <button id="voiceBtn" type="button">🎙️ 음성 인식 시작</button>
+    </div>
+
+    <script src="./src/voice.js"></script>
+  </body>
+</html>
